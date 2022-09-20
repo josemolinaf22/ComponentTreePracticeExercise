@@ -1,22 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-
-
-function InputArea({addItem}) {
-    const [inputText, setInputText] = useState("");
-    
-      function handleChange(event) {
-    const newValue = event.target.value;
-    setInputText(newValue);
-  }
-    
+function InputArea() {
   return (
     <div className="form">
       <input onChange={handleChange} type="text" value={inputText} />
-      <button onClick={() => {
-          addItem(inputText)
-          setInputText('')
-      }}>
+      <button onClick={addItem}>
         <span>Add</span>
       </button>
     </div>
